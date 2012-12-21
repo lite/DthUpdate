@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DthUpdate</string>
+    <string name="update_xml">http://192.168.1.21:8080/update.xml</string>
+</resources>
