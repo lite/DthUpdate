@@ -45,15 +45,23 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GameLoader.cs" />
-     <Compile Include="Assets\GameMenu.cs" />
-     <Compile Include="Assets\Scene1.cs" />
-     <Compile Include="Assets\Scene2.cs" />
-     <Compile Include="Assets\Scene3.cs" />
+     <Compile Include="Assets\JSON\JSONScene.cs" />
+     <Compile Include="Assets\XML\XMLScene.cs" />
+     <Compile Include="Assets\_Scripts\Cube.cs" />
      <None Include="Assets\Plugins\Android\build.xml" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit Premultiplied Alpha.shader" />
      <None Include="Assets\Plugins\Android\proguard-project.txt" />
      <None Include="Assets\Plugins\Android\res\layout\main.xml" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit Alpha Enabled (Default).shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\StreamingAssets\Scene0.xml" />
+     <None Include="Assets\StreamingAssets\Scene0.txt" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit No Alpha.shader" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{84FEC96F-4F44-3736-D28B-6F8180E887D3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

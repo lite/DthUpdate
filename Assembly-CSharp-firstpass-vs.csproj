@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{12102262-C45D-7E09-8E91-D759A9EDBD75}</ProjectGuid>
+	<ProjectGuid>{84FEC96F-4F44-3736-D28B-6F8180E887D3}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_GENERICS;UNITY_ANDROID_API;ENABLE_CLOTH;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_0_0;UNITY_4_0;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,18 +44,67 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\Android\GooglePlayDownloader.cs" />
+     <Compile Include="Assets\Plugins\MiniJSON.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\IPositionable.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\ITouchable.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UIAbstractContainer.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UIAbstractTouchableContainer.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UIControlTemplate.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UIElement.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UIObject.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UISprite.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UISpriteAnimation.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UISpriteManager.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\BaseElements\UITouchableSprite.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIAbsoluteLayout.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIBackgroundLayout.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIHorizontalLayout.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIScrollableHorizontalLayout.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIScrollableVerticalLayout.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIVerticalLayout.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Containers\UIVerticalPanel.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UIAnchorInfo.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UIClippingPlane.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UIEdgeInsets.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UIEdgeOffsets.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UITouchMaker.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UIUVRect.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Structs\UIVertexIndices.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Support\IPositionablePositioningExtensions.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Support\UIObjectAnimationExtensions.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\Support\UIRelative.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UI.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIAnimation\Easing.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIAnimation\UIAnimation.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\TouchInfo.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIButton.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIColorPicker.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIContinuousButton.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIGhostJoystick.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIJoystick.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIKnob.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UILanguageManager.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIProgressBar.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UISlider.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UISpacer.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIStateButton.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIStateSprite.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UISwipeDetector.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIText.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UITextInstance.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIToggleButton.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIElements\UIZoomButton.cs" />
+     <Compile Include="Assets\Plugins\UIToolkit\UIToolkit.cs" />
      <None Include="Assets\Plugins\Android\build.xml" />
-     <None Include="Assets\Plugins\Android\res\layout-v11\status_bar_ongoing_event_progress_bar.xml" />
-     <None Include="Assets\Plugins\Android\res\values-v9\styles.xml" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit Premultiplied Alpha.shader" />
+     <None Include="Assets\Plugins\Android\proguard-project.txt" />
      <None Include="Assets\Plugins\Android\res\layout\main.xml" />
-     <None Include="Assets\Plugins\Android\res\values-v11\styles.xml" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit Alpha Enabled (Default).shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\README.txt" />
-     <None Include="Assets\Plugins\Android\res\layout\status_bar_ongoing_event_progress_bar.xml" />
-     <None Include="Assets\Plugins\Android\res\values\styles.xml" />
+     <None Include="Assets\StreamingAssets\Scene0.xml" />
+     <None Include="Assets\StreamingAssets\Scene0.txt" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit No Alpha.shader" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
-     <None Include="Assets\Plugins\Android\res\values\main-strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{99106684-0126-2082-5D20-88481862B907}") = "DthUpdate", "Assembly-CSharp-firstpass-vs.csproj", "{84FEC96F-4F44-3736-D28B-6F8180E887D3}"
+EndProject
 Project("{99106684-0126-2082-5D20-88481862B907}") = "DthUpdate", "Assembly-CSharp-vs.csproj", "{AF06FC5E-A298-425A-1B19-D0E56A715A5A}"
 EndProject
 Project("{99106684-0126-2082-5D20-88481862B907}") = "DthUpdate", "Assembly-CSharp-Editor-vs.csproj", "{7B12F77F-5F53-864B-C196-ABDC2535B1FF}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84FEC96F-4F44-3736-D28B-6F8180E887D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FEC96F-4F44-3736-D28B-6F8180E887D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FEC96F-4F44-3736-D28B-6F8180E887D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FEC96F-4F44-3736-D28B-6F8180E887D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF06FC5E-A298-425A-1B19-D0E56A715A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF06FC5E-A298-425A-1B19-D0E56A715A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF06FC5E-A298-425A-1B19-D0E56A715A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																		GlobalSection(MonoDevelopProperties) = preSolution
+																																																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

@@ -1,12 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using System.Reflection;
 
 public class GameLoader : MonoBehaviour {
 	
 	void OnGUI()
 	{
 		if (GUI.Button(new Rect(10, 200, 100, 30), "Start")){
-			Application.LoadLevel(1);
+			loadBytes();
+			
+			Application.LoadLevel("GameMenu");
 		}
 		
 		if(GUI.Button(new Rect(10, 300, 100, 30), "Update")){   
@@ -42,5 +45,62 @@ public class GameLoader : MonoBehaviour {
         {   
             Application.Quit();   
         }   
-    }   
+    } 
+	
+	private bool loadBytes()
+	{
+		//string link = "http://192.168.1.21:8080/scripts.unity3d";
+		string link = "file://" + Application.dataPath + "/bundles/scripts.unity3d";
+		WWW download = WWW.LoadFromCacheOrDownload(link, 1);
+	    Debug.Log("start load bytes from" + link + "---"+Time.fixedTime );
+	
+		if (download.error != null)
+	    {
+	        Debug.LogError(download.error);
+	        return false;
+	    }
+	
+		AssetBundle bundleBytes = download.assetBundle;
+		Debug.Log("end load bytes-------------------------------"+Time.fixedTime);
+
+		// Load the TextAsset object
+		Object [] objs = bundleBytes.LoadAll(typeof(TextAsset));
+		foreach(TextAsset o in objs){
+			Debug.Log(o.name);
+			Assembly assembly = Assembly.Load(o.bytes);
+    		System.Type type = assembly.GetType("GameMenu");
+			GameObject go = new GameObject();
+			go.AddComponent(type);
+//			GameObject cam = GameObject.Find("Main Camera");
+//			cam.AddComponent(type);
+//			Camera.main.AddComponent( "GameMenu" );
+			
+//			MethodInfo dump = type.GetMethod("Dump", new System.Type[0]);
+//			if (dump != null)
+//		    {
+//				dump.Invoke(assembly, null);
+//		    }
+        }
+		
+	    return true;
+	}
+
+	private bool loadScenes()
+	{
+		//string link = "http://192.168.1.21:8080/scenes.unity3d";
+		string link = "file://" + Application.dataPath + "/bundles/scenes.unity3d";
+		WWW download = WWW.LoadFromCacheOrDownload(link, 1);
+	    Debug.Log("start load scenes from" + link + "---"+Time.fixedTime );
+	
+		if (download.error != null)
+	    {
+	        Debug.LogError(download.error);
+	        return false;
+	    }
+	
+		Debug.Log("end load scenes-------------------------------"+Time.fixedTime);
+	
+	    return true;
+	}
+
 }

@@ -1,8 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/ExportAssetBundles.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/XML/XMLScene.cs">
     <Files>
-      <File FileName="Assets/Editor/ExportAssetBundles.cs" Line="8" Column="17" />
+      <File FileName="Assets/Plugins/MiniJSON.cs" Line="18" Column="15" />
+      <File FileName="Assets/Editor/Streaming.cs" Line="33" Column="7" />
+      <File FileName="Assets/GameLoader.cs" Line="60" Column="1" />
+      <File FileName="Assets/XML/XMLScene.cs" Line="59" Column="20" />
+      <File FileName="Assets/_Scripts/Cube.cs" Line="16" Column="59" />
+      <File FileName="Assets/Editor/AssetBundler.cs" Line="100" Column="1" />
+      <File FileName="Assets/JSON/JSONScene.cs" Line="24" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

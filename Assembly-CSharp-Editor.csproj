@@ -44,17 +44,25 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\ExportAssetBundles.cs" />
+     <Compile Include="Assets\Editor\AssetBundler.cs" />
+     <Compile Include="Assets\Editor\Streaming.cs" />
      <None Include="Assets\Plugins\Android\build.xml" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit Premultiplied Alpha.shader" />
      <None Include="Assets\Plugins\Android\proguard-project.txt" />
      <None Include="Assets\Plugins\Android\res\layout\main.xml" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit Alpha Enabled (Default).shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\StreamingAssets\Scene0.xml" />
+     <None Include="Assets\StreamingAssets\Scene0.txt" />
+     <None Include="Assets\Plugins\UIToolkit\Shaders\UIToolkit No Alpha.shader" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{84FEC96F-4F44-3736-D28B-6F8180E887D3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{AF06FC5E-A298-425A-1B19-D0E56A715A5A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
